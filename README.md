@@ -39,6 +39,7 @@ The project follows a clean, modular structure, physically separating the source
 │   ├── 🧪 UserService.Tests
 │   └── 🧪 TaskService.Tests
 └── 📁 client (React Frontend)
+
 🚀 Getting Started
 Prerequisites
 .NET 8 SDK
@@ -49,51 +50,3 @@ Node.js (For the frontend)
 
 Installation & Setup
 1. Clone the repository
-
-Bash
-git clone [https://github.com/alifatihuzun/TaskFlow.git](https://github.com/alifatihuzun/TaskFlow.git)
-cd TaskFlow
-2. Database Configuration
-Update the appsettings.json file in your services with your PostgreSQL connection string:
-
-JSON
-"ConnectionStrings": {
-  "DefaultConnection": "Host=localhost;Database=TaskFlowDb;Username=postgres;Password=yourpassword"
-}
-3. Apply Migrations & Run Backend
-Navigate to the service directory (e.g., TaskService) and run the application:
-
-Bash
-cd src/TaskService
-dotnet ef database update
-dotnet run
-The API will be available at http://localhost:5000 (or the port specified in your launchSettings).
-
-4. Run Tests
-To ensure everything is working correctly, run the automated test suite:
-
-Bash
-dotnet test
-📡 API Endpoints Overview
-Auth: POST /api/auth/login, POST /api/auth/register
-
-Tasks:
-
-GET /api/task (Get all tasks for the logged-in user)
-
-GET /api/task/{id} (Get task details)
-
-POST /api/task (Create a new task)
-
-PUT /api/task/{id} (Update an existing task)
-
-DELETE /api/task/{id} (Delete a task)
-
-🛡️ Security & Best Practices
-Never Trust the Client: User IDs are never accepted from request bodies for sensitive operations; they are securely extracted from the JWT Claims.
-
-Enum Parsing: External string inputs (e.g., priority levels) are safely parsed into internal Enums before database interaction.
-
-DTO Mapping: Internal Domain Models are isolated from the presentation layer using custom Mapper functions.
-
-Developed by Ali Fatih Uzun
