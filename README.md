@@ -14,7 +14,7 @@ TaskFlow is an enterprise-grade, secure, and highly scalable Task and Reminder M
 ## 🛠️ Tech Stack
 
 **Backend:**
-* C# & .NET 8 Web API
+* C# & .NET 10 Web API
 * Entity Framework Core (Code-First)
 * PostgreSQL
 * xUnit (Unit Testing)
