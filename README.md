@@ -42,7 +42,7 @@ The project follows a clean, modular structure, physically separating the source
 └── 📁 client (React Frontend)
 🚀 Getting Started
 Prerequisites
-.NET 8 SDK
+.NET 10 SDK
 
 PostgreSQL
 
